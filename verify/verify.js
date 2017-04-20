@@ -15,7 +15,7 @@ var employeeId, employeeURI, attendanceId, attendanceURI;
 
 describe("Test", function () {
   this.timeout(60000);
-  it("POST /employees -> 201", function (done) {
+  step("POST /employees -> 201", function (done) {
     var options = {
       url: endpoint + '/employees',
       method: 'POST',
@@ -53,7 +53,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /employees/{employeeId} -> 200", function (done) {
+  step("GET /employees/{employeeId} -> 200", function (done) {
     var options = {
       url: endpoint + '/employees/' + employeeId,
       method: 'GET',
@@ -106,7 +106,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /employees -> 200", function (done) {
+  step("GET /employees -> 200", function (done) {
     var options = {
       url: endpoint + '/employees',
       method: 'GET',
@@ -162,7 +162,7 @@ describe("Test", function () {
     });
   });
   
-  it("PUT /employees/{employeeId} -> 204", function (done) {
+  step("PUT /employees/{employeeId} -> 204", function (done) {
     var options = {
       url: endpoint + '/employees/' + employeeId,
       method: 'PUT',
@@ -184,7 +184,7 @@ describe("Test", function () {
     });
   });
   
-  it("DELETE /employees/{employeeId} -> 204", function (done) {
+  step("DELETE /employees/{employeeId} -> 204", function (done) {
     var options = {
       url: endpoint + '/employees/' + employeeId,
       method: 'DELETE',
@@ -202,7 +202,7 @@ describe("Test", function () {
   });
   
   
-  it("POST /attendances -> 201", function (done) {
+  step("POST /attendances -> 201", function (done) {
     var options = {
       url: endpoint + '/attendances',
       method: 'POST',

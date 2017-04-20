@@ -10,12 +10,14 @@
     "tv4": "^1.2.7"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1"
+    "babel-cli": "^6.10.1",
+    "mocha-steps": "^1.0.2"
+
   },
   "scripts": {
     "preinstall": "npm i -g mocha",
     "build": "./node_modules/.bin/babel src -d lib",
-    "test": "mocha verify.js",
+    "test": "mocha --require mocha-steps verify.js",
     "watch": "./node_modules/.bin/babel src -d lib -w"
   },
   "author": "aisensiy",
